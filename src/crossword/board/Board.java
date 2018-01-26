@@ -67,14 +67,30 @@ public class Board implements Serializable{
     }
 
     //metoda ktora tworzy regex, gdzie na pierwszym miejscu jest dana litera ze slowa, a reszta to jest odpowiednia ilosc liter dostepnych na planszy
-    String createPattern(int fromx, int fromy, int tox, int toy){
-        String pattern="^";
-        int ilosc = tox - fromx;
-        String first = board[0][fromy].getContent();
-        first = first.toLowerCase();
-        pattern +=first + "[A-Za-z]{2,";
-        pattern+=String.valueOf(ilosc) + "}";
-        pattern+="$";
-        return pattern;
+    String createPattern(int fromx, int fromy, int tox, int toy, Strategy strategy){
+        if(strategy instanceof SimpleStrategy) {
+            String pattern = "^";
+            int ilosc = tox - fromx;
+            String first = board[0][fromy].getContent();
+            first = first.toLowerCase();
+            pattern += first + "[A-Za-z]{2,";
+            pattern += String.valueOf(ilosc) + "}";
+            pattern += "$";
+            return pattern;
+        }
+        else{
+            String pattern = "^";
+            int przed = getWidth()/2 - fromx;
+            int po = tox - getWidth()/2;
+            String letter = board[getWidth()/2][fromy].getContent();
+            letter = letter.toLowerCase();
+            pattern += "[A-Za-z]{0,";
+            pattern += String.valueOf(przed) + "}";
+            pattern += letter;
+            pattern += "[A-Za-z]{0,";
+            pattern += String.valueOf(po) + "}";
+            pattern += "$";
+            return pattern;
+        }
     }
 }

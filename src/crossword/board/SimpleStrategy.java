@@ -34,14 +34,14 @@ public class SimpleStrategy extends Strategy implements Serializable {
 
             Random generator = new Random();
             int los = generator.nextInt(cw.getBoardCopy().getWidth() - 3) + 2;  //losujemy dlugosc hasla z zakresu (2,szerokosc)
-            String pat = cw.getBoardCopy().createPattern(first.getX(), first.getY()+i, los, first.getY()+i); //tworzymy pattern dla slowa okreslonej dlugosci
+            String pat = cw.getBoardCopy().createPattern(first.getX(), first.getY()+i, los, first.getY()+i,this); //tworzymy pattern dla slowa okreslonej dlugosci
             Entry e = cw.getCwDB().getRandom(pat); //wyszukujemy slowo pasujace do danego patternu
 
             int licznik = 0;
             while (e==null) { //dopoki nie znajdziemy odpowiedniego hasla
 
                     los = generator.nextInt(cw.getBoardCopy().getWidth() - 4)+4;
-                    pat = cw.getBoardCopy().createPattern(first.getX(), first.getY()+i, los, first.getY()+i);
+                    pat = cw.getBoardCopy().createPattern(first.getX(), first.getY()+i, los, first.getY()+i,this);
                     e = cw.getCwDB().getRandom(pat);
                     if (e!=null && cw.contains(e.getWord())) e=null;
 
