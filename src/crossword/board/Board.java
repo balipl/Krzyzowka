@@ -7,6 +7,7 @@ import java.util.LinkedList;
 
 //klasa tworzaca plansze do gry
 public class Board implements Serializable{
+    static final long serialVersionUID = -7588980448693010399L;
     private BoardCell[][] board;
     private int width;
     private int height;

@@ -6,10 +6,11 @@ import crossword.dictionary.Entry;
 import crossword.exceptions.TooBigBoardException;
 import crossword.exceptions.WordNotFoundException;
 
+import java.io.Serializable;
 import java.util.Iterator;
 import java.util.Random;
 
-public class SimpleStrategy extends Strategy {
+public class SimpleStrategy extends Strategy implements Serializable {
     static final long serialVersionUID = -7588980448693010399L;
 
     //funkcja, wyszukuj?ca has?o do krzyzowki

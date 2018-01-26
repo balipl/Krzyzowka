@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Scanner;
 
 //klasa ktora jest baza danych wszystkich hasel krzyzowkowych
-public class CwDB {
+public class CwDB implements Serializable {
     static final long serialVersionUID = -7588980448693010399L;
     //lista wszystkich hasel
     protected LinkedList<Entry> dict = new LinkedList<>();

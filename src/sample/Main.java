@@ -76,7 +76,6 @@ public class Main extends Application {
 
 
         for (int i = 1; i < entries.size(); i++) {
-            System.out.println(i + " " + entries.get(i).getClue());
             Text text = new Text(entries.get(i).getClue());
             text.setTranslateY(i*20);
             root.getChildren().add(text);

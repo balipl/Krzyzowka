@@ -9,9 +9,10 @@ import crossword.exceptions.WordNotFoundException;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.LinkedList;
 
-public class CwBrowser {
+public class CwBrowser implements Serializable {
     private LinkedList<Crossword> crosswords = new LinkedList<>();
     static final long serialVersionUID = -7588980448693010399L;
 

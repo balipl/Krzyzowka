@@ -5,7 +5,7 @@ import crossword.board.Crossword;
 import java.io.*;
 import java.util.Date;
 
-public class Writer  implements IWriter{
+public class Writer  implements IWriter, Serializable{
     static final long serialVersionUID = -7588980448693010399L;
     @Override
     public void write(Crossword cw) {

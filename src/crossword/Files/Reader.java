@@ -5,7 +5,7 @@ import crossword.board.Crossword;
 import java.io.*;
 import java.util.LinkedList;
 
-public class Reader implements IReader {
+public class Reader implements IReader, Serializable {
     static final long serialVersionUID = -7588980448693010399L;
     private String path;
     public Reader(String path){

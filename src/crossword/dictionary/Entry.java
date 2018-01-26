@@ -1,7 +1,9 @@
 package crossword.dictionary;
 
+import java.io.Serializable;
+
 //klasa przedstawiajaca pojedyncze haslo krzyzowki
-public class Entry {
+public class Entry implements Serializable {
     static final long serialVersionUID = -7588980448693010399L;
     //pola slowo i podpowiedz
     private String word;

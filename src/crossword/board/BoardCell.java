@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 //klasa b?d?ca pojedy?cz? kom?rk? w krzy??wce
 public class BoardCell implements Serializable{
-
+    static final long serialVersionUID = -7588980448693010399L;
     //zawiera informacje o zawartosci, oraz mozliwosci rozszerzenia krzyzowki w danym kierunku
     String content;
     boolean canHorizStart,canHorizIn,canHorizEnd;
