@@ -2,7 +2,7 @@ package crossword.Files;
 
 import crossword.board.Crossword;
 
-public interface Writer {
+public interface IWriter {
     void write(Crossword cw);
     long getUniqueID();
 }
