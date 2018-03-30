@@ -9,6 +9,10 @@ Crosswords are generated with empty fields, but with only one click you can fill
 
 ## How it looks?
 
+![ Screen1 ](/ScreenShots/screen1.png)
+![ Screen2 ](/ScreenShots/screen2.png)
+![ Screen3 ](/ScreenShots/screen3.png)
+
 ## Built With
 
 * [IntelliJ](https://www.jetbrains.com/idea/) - Java integrated development environment 
